@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/WEB-INF/views/layouts/default.jsp">
+        <put-attribute name="title" value="HIPERION"/>
+        <put-attribute name="header" value=""/>
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Hiperion Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+    </definition>
+    <definition name="collectors" extends="baseLayout">
+        <put-attribute name="title" value="Data Collectors"/>
+        <put-attribute name="body" value="/WEB-INF/views/collectors/collectors.jsp"/>
+    </definition>
+    <definition name="sources" extends="baseLayout">
+        <put-attribute name="title" value="Data Sources"/>
+        <put-attribute name="body" value="/WEB-INF/views/sources/sources.jsp"/>
+    </definition>
+    <definition name="events" extends="baseLayout">
+        <put-attribute name="title" value="Events"/>
+        <put-attribute name="body" value="/WEB-INF/views/events/events.jsp"/>
+    </definition>
+    <definition name="conf_nodes" extends="baseLayout">
+        <put-attribute name="title" value="Nodes Configuration"/>
+        <put-attribute name="body" value="/WEB-INF/views/configuration/conf_nodes.jsp"/>
+    </definition>
+    <definition name="conf_processing" extends="baseLayout">
+        <put-attribute name="title" value="Processing Configuration"/>
+        <put-attribute name="body" value="/WEB-INF/views/configuration/conf_processing.jsp"/>
+    </definition>
+    <definition name="action" extends="baseLayout">
+        <put-attribute name="title" value="Action"/>
+        <put-attribute name="body" value="/WEB-INF/views/action/action.jsp"/>
+    </definition>
+    <definition name="live-data" extends="baseLayout">
+        <put-attribute name="title" value="Live Data"/>
+        <put-attribute name="body" value="/WEB-INF/views/output/live_data.jsp"/>
+    </definition>
+    <definition name="live-events" extends="baseLayout">
+        <put-attribute name="title" value="Live Events"/>
+        <put-attribute name="body" value="/WEB-INF/views/output/live_events.jsp"/>
+    </definition>
+    <definition name="log" extends="baseLayout">
+        <put-attribute name="title" value="Log"/>
+        <put-attribute name="body" value="/WEB-INF/views/log/log.jsp"/>
+    </definition>
+</tiles-definitions>

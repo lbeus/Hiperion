@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event id="rasip-sensors-light-watch" publishable="true" stateful="true" stream_id="rasip-rasip-sensors">
+    <description>Rasip light watcher.</description>
+    <rise-conditions>
+        <and-condition>
+          <equals field_name="rasip-light-light">0</equals>
+        </and-condition>
+    </rise-conditions>
+    <post-actions>
+        <action id="email-not" node_id="rasip-test-node">
+          <parameters>
+              <simple name="subject">Light Watcher</simple>
+              <simple name="text">Rasip light sensor 0 lux.</simple>
+              <list name="recipients">
+                <item>ivica.obestar@gmail.com</item>
+              </list>
+          </parameters>
+        </action>
+      	<action id="std-output" node_id="rasip-test-node">
+          <parameters>
+              <simple name="output-text">Rasip light sensor 0 lux.</simple>
+          </parameters>
+        </action>
+    </post-actions>
+</event>

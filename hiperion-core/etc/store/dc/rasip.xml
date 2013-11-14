@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-collector id="rasip" type="pull" cron_expression="">
+    <description>RASIP local sensors.</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>rasip-local</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="rasip-sensors">
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-temp</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-light-temp</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-light-light</data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

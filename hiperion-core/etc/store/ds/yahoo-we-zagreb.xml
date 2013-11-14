@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<data-source id="yahoo-we-zagreb">
+<description>Yahoo weather for Zagreb</description>
+    <latitude>45.81</latitude>
+    <longitude>15.99</longitude>
+    <service id="yahoo-weather" node_id="rasip-test-node">
+        <parameters>
+            <simple name="forecast-rss-uri">
+              <![CDATA[http://weather.yahooapis.com/forecastrss?w=12905437&u=c]]></simple>
+        </parameters>
+    </service>
+</data-source>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<data-collector id="dc-wm-pull-1" type="pull" cron_expression="">
+    <description>Waspmote pull data collector for termometar-1sh</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>ds-wm-termometar-1sh</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="wm-1sh">
+            <select-statement>
+                <data-source-name>ds-wm-termometar-1sh</data-source-name>
+                <data-field-name>t</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>ds-wm-termometar-1sh</data-source-name>
+                <data-field-name>b</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>ds-wm-termometar-1sh</data-source-name>
+                <data-field-name>ax</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>ds-wm-termometar-1sh</data-source-name>
+                <data-field-name>ay</data-field-name>
+            </select-statement>
+          <select-statement>
+                <data-source-name>ds-wm-termometar-1sh</data-source-name>
+                <data-field-name>az</data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

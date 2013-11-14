@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<data-collector id="rasip-cam" type="pull" cron_expression="">
+    <description>RASIP local sensors with webcam.</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>rasip-local</data-source>
+            <data-source>local-web-cam</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="rasip-sensors">
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-temp</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-light-temp</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>rasip-local</data-source-name>
+                <data-field-name>rasip-light-light</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>local-web-cam</data-source-name>
+                <data-field-name>my-webcam</data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

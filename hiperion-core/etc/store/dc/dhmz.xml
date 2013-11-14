@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<data-collector id="dhmz" type="pull" cron_expression="">
+    <description>Passive pull collector for ZG Gric WebCam</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>dhmz-web-cams</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="dhmz-web-cams">
+            <select-statement>
+                <data-source-name>dhmz-web-cams</data-source-name>
+                <data-field-name>zggric-webcam</data-field-name>
+                <output-data-field-name>gric</output-data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>dhmz-web-cams</data-source-name>
+                <data-field-name>split-webcam</data-field-name>
+                <output-data-field-name>split</output-data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

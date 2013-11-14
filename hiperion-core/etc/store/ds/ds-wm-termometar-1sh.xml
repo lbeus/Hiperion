@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data-source id="ds-wm-termometar-1sh">
+    <description>Waspmote termostat 1sh.</description>
+    <latitude>45.81</latitude>
+    <longitude>15.99</longitude>
+    <service id="waspmote" node_id="rasip-test-node">
+        <parameters>
+            <simple name="waspmote-id">termometar-1sh</simple>
+        </parameters>
+    </service>
+</data-source>

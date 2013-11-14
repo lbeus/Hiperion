@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<data-collector id="picture-push" type="push" cron_expression="">
+    <description>Picture push collector.</description>
+    <selectors>
+        <selector name="camera">
+            <select-statement>
+                <data-source-name>local-camera</data-source-name>
+                <data-field-name>usb-cam</data-field-name>
+            </select-statement>
+          <select-statement>
+                <data-source-name>local-camera</data-source-name>
+                <data-field-name>description</data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

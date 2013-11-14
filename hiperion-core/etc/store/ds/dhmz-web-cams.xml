@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-source id="dhmz-web-cams">
+    <description>DHMZ Webcams</description>
+    <latitude>45.81</latitude>
+    <longitude>15.99</longitude>
+    <service id="http-client" node_id="rasip-test-node">
+        <parameters>
+            <simple name="host">vrijeme.hr</simple>
+            <simple name="port">80</simple>
+            <map name="uris">
+                <entry key="zggric-webcam" value="/zggric.jpg"/>
+                <entry key="split-webcam" value="/split.jpg"/>
+            </map>
+        </parameters>
+    </service>
+</data-source>

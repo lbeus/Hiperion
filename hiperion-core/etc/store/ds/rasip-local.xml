@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<data-source id="rasip-local">
+<description>Rasip local sensors: rabbit, light, temp</description>
+    <latitude>45.81</latitude>
+    <longitude>15.99</longitude>
+    <service id="rasip-sensors" node_id="rasip-test-node">
+        <parameters>
+            <simple name="rasip-live-temp-uri">http://161.53.67.199/report.xml</simple>
+            <simple name="rasip-live-light-temp-uri">http://161.53.67.195/temperatura.xml</simple>
+            <simple name="rasip-live-light-light-uri">http://161.53.67.195/osvjetljenje.xml</simple>
+        </parameters>
+    </service>
+</data-source>

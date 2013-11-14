@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data-collector id="cameras" type="pull" cron_expression="">
+    <description>Passive camera picture collect.</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>local-web-cam</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="local-web-cams">
+            <select-statement>
+                <data-source-name>local-web-cam</data-source-name>
+                <data-field-name>my-webcam</data-field-name>
+                <output-data-field-name>my-picture</output-data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>

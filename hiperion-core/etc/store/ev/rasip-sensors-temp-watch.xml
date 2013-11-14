@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event id="rasip-sensors-temp-watch" publishable="true" stateful="true" stream_id="rasip-rasip-sensors">
+    <description>Rasip temperture watcher.</description>
+    <rise-conditions>
+        <and-condition>
+            <greater-than field_name="rasip-temp">30</greater-than>
+            <or-condition>
+                <equals field_name="rasip-light-light">0.0</equals>
+                <less-than field_name="rasip-temp">40</less-than>
+            </or-condition>
+        </and-condition>
+    </rise-conditions>
+    <post-actions>
+        <action id="std-output" node_id="rasip-test-node">
+            <parameters>
+                <simple name="output-text">rasip-sensors-temp-watch test message.</simple>
+            </parameters>
+        </action>
+    </post-actions>
+</event>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<data-collector id="dc-yahoo-weather" type="pull" cron_expression="">
+    <description>Waspmote pull data collector for termometar-2sh</description>
+    <acquisition-block name="acq1">
+        <data-sources>
+            <data-source>yahoo-we-zagreb</data-source>
+        </data-sources>
+    </acquisition-block>
+    <selectors>
+        <selector name="zagreb">
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>temperature</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>wind-direction</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>wind-speed</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>humidity</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>visibility</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>pressure</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>sunrise</data-field-name>
+            </select-statement>
+            <select-statement>
+                <data-source-name>yahoo-we-zagreb</data-source-name>
+                <data-field-name>sunset</data-field-name>
+            </select-statement>
+        </selector>
+    </selectors>
+</data-collector>
